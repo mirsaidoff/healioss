@@ -1,4 +1,4 @@
-package uz.mirsaidoff.healioss
+package uz.mirsaidoff.healioss.ui
 
 import android.content.Context
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import uz.mirsaidoff.healioss.R
 import uz.mirsaidoff.healioss.databinding.FragmentMainBinding
 
 class MainFragment : Fragment(R.layout.fragment_main) {
@@ -30,7 +31,6 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         }
     }
 
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = FragmentMainBinding.inflate(inflater, container, false)
         return binding.root
@@ -38,5 +38,8 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.tvFragmentName.setOnClickListener {
+            navigation.openDetailsFragment()
+        }
     }
 }

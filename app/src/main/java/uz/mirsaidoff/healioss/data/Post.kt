@@ -1,4 +1,4 @@
-package uz.mirsaidoff.healioss.model
+package uz.mirsaidoff.healioss.data
 
 class Post(
     val userId: Int,

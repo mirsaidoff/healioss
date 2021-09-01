@@ -1,4 +1,4 @@
-package uz.mirsaidoff.healioss
+package uz.mirsaidoff.healioss.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import uz.mirsaidoff.healioss.databinding.FragmentDetailsBinding
-import uz.mirsaidoff.healioss.databinding.FragmentMainBinding
 
 class DetailsFragment : Fragment() {
 

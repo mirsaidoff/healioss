@@ -1,4 +1,4 @@
-package uz.mirsaidoff.healioss
+package uz.mirsaidoff.healioss.ui
 
 interface Navigation {
     fun openDetailsFragment()

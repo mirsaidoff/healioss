@@ -1,4 +1,4 @@
-package uz.mirsaidoff.healioss
+package uz.mirsaidoff.healioss.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -23,8 +23,15 @@ class MainActivity : AppCompatActivity(), Navigation {
     override fun openDetailsFragment() {
         supportFragmentManager
             .beginTransaction()
-            .add(binding.container.id, DetailsFragment.newInstance())
+            .replace(binding.container.id, DetailsFragment.newInstance())
             .addToBackStack(DetailsFragment::class.java.name)
             .commit()
+    }
+
+    override fun onBackPressed() {
+        if (supportFragmentManager.backStackEntryCount > 1)
+            super.onBackPressed()
+        else
+            finish()
     }
 }
